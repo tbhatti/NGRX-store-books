@@ -12,6 +12,9 @@ export function reducer(state: Book[] = [initialState], action: BookActions.Acti
     switch (action.type) {
         case BookActions.ADD_BOOK:
             return [...state, action.payload];
+        case BookActions.REMOVE_BOOK:
+            state.splice(action.payload, 1)
+            return state;
 
         default:
             return state;
