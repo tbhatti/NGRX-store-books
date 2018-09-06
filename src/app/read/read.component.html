@@ -1,0 +1,10 @@
+<div class="right">
+
+  <h3>Books</h3>
+  <ul>
+    <li *ngFor="let book of books | async">
+      <a [href]="book.url" target="_blank">{{ book.name }}</a>
+    </li>
+  </ul>
+
+</div>
